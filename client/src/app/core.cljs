@@ -24,8 +24,7 @@
   (rum/mount component (.querySelector js/document element)))
 
 (defn main []
-  (do
-    (-> (js/fetch "https://api.github.com/users/yeehaa123/events")
-        (.then #(.json %1))
-        (.then #(js->clj %1 :keywordize-keys true))
-        (.then #(mount (git-events %1) "#git-container1")))))
+  (-> (js/fetch "https://api.github.com/users/yeehaa123/events")
+      (.then #(.json %1))
+      (.then #(js->clj %1 :keywordize-keys true))
+      (.then #(mount (git-events %1) "#container"))))
