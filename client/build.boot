@@ -9,7 +9,9 @@
                  [org.clojure/clojurescript   "1.9.76"]
                  [com.cemerick/piggieback     "0.2.2-SNAPSHOT"          :scope "test"]
                  [weasel                      "0.7.0"          :scope "test"]
-                 [org.clojure/tools.nrepl     "0.2.12"         :scope "test"]])
+                 [org.clojure/tools.nrepl     "0.2.12"         :scope "test"]
+                 [rum "0.10.5"]
+                 [cljsjs/moment "2.10.6-4"]])
 
 (require
  '[adzerk.boot-cljs      :refer [cljs]]
