@@ -47,5 +47,5 @@
 
 (deftask build []
   (task-options! target {:dir #{"dist/"}})
-  (cljs :optimizations :advanced)
-  (target))
+  (comp (cljs :optimizations :advanced)
+        (target)))
